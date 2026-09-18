@@ -1,0 +1,5 @@
+# compiled solutions
+*.out
+# clangd index
+.cache/
+.DS_Store
