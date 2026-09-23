@@ -1,6 +1,5 @@
-# Point clangd at Homebrew GCC so <bits/stdc++.h> and GCC's libstdc++ resolve.
-# Requires clangd to be started with --query-driver=/opt/homebrew/bin/g++-*
-# (set in ~/.config/nvim/lua/plugins/competitest.lua).
+# Point clangd at GCC so <bits/stdc++.h> and GCC's libstdc++ resolve -- clang's
+# own headers have no such file, and Codeforces judges with GNU G++ anyway.
 CompileFlags:
-  Compiler: /opt/homebrew/bin/g++-16
+  Compiler: /usr/bin/g++
   Add: [-std=c++20, -Wall, -Wextra, -DLOCAL]
